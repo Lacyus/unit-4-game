@@ -5,12 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystal Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     
 </head>
 <body>
-    
 
-    <script src="main.js"></script> 
+        <div class="matchNumber">
+            <h2>Number Total to reach:
+                <span id= "randomNumber"></span>
+            </h2>
+        </div>
+
+        <div class="winsNLosses">
+            <h2>Wins:
+                <span id= "numberWins"></span>
+                </br>
+                Losses: 
+                <span id= "numberLosses"></span>
+            </h2>
+        </div>
+
+
+        <div class="gems">
+            <img src="assets/images/blue.png" class=gemImage id="gemOne" alt="Blue">
+            <img src="assets/images/green.png" class=gemImage id="gemTwo" alt="Green">
+            <img src="assets/images/pink.png" class=gemImage id= "gemThree" alt="Pink">
+            <img src="assets/images/orange.png" class=gemImage id= "gemFour" alt="Orange">
+        </div>
+
+        <div class="playerTotal">
+            <h2>Your total score is:
+              <span id="finalTotal"></span>
+            </h2>
+        </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/java.js"></script> 
 </body>
 </html>
