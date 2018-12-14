@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    
+}
+
+h2 {
+    padding: 10px;
+    background: skyblue;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}

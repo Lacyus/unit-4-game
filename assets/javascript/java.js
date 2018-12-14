@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
     // selects a random number between the values of 19 to 120
-    var randomize = Math.floor(Math.random() * 101 + 19);
+    var randomize = Math.floor(Math.random() * 121);
 
     // random values for each jewel between the numbers 1 to 12
-    var value1 = Math.floor(Math.random() * 11 + 1);
-    var value2 = Math.floor(Math.random() * 11 + 1);
-    var value3 = Math.floor(Math.random() * 11 + 1);
-    var value4 = Math.floor(Math.random() * 11 + 1);
+    var value1 = Math.floor(Math.random() * 13);
+    var value2 = Math.floor(Math.random() * 13);
+    var value3 = Math.floor(Math.random() * 13);
+    var value4 = Math.floor(Math.random() * 13);
 
     var playerTotal = 0;
     var wins = 0;
@@ -23,12 +23,12 @@ $(document).ready(function () {
 
     // resets the game
     function reset() {
-        randomize = Math.floor(Math.random() * 101 + 19);
+        randomize = Math.floor(Math.random() * 121);
         $('#randomNumber').text(randomize);
-        num1 = Math.floor(Math.random() * 11 + 1);
-        num2 = Math.floor(Math.random() * 11 + 1);
-        num3 = Math.floor(Math.random() * 11 + 1);
-        num4 = Math.floor(Math.random() * 11 + 1);
+        value1 = Math.floor(Math.random() * 13);
+        value2 = Math.floor(Math.random() * 13);
+        value3 = Math.floor(Math.random() * 13);
+        value4 = Math.floor(Math.random() * 13);
         playerTotal = 0;
         $('#finalTotal').text(playerTotal);
     }
@@ -45,7 +45,7 @@ $(document).ready(function () {
         alert("You lose!");
         losses++;
         $('#numberLosses').text(losses);
-        reset()
+        reset();
     }
 
     // Clicks for all 4 jewels and the conditions for winning and lossing after resulting clicks
@@ -72,6 +72,7 @@ $(document).ready(function () {
             loser();
         }
     })
+
     $('#gemThree').on('click', function () {
         playerTotal = playerTotal + value3;
         $('#finalTotal').text(playerTotal);
@@ -83,6 +84,7 @@ $(document).ready(function () {
             loser();
         }
     })
+    
     $('#gemFour').on('click', function () {
         playerTotal = playerTotal + value4;
         $('#finalTotal').text(playerTotal);
